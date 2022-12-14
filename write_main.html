@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Diary_Write</title>
+    <script>
+      var today = new Date();
+      var year = today.getFullYear();
+      var date = today.getDate();
+      const months = [
+        'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
+      ]
+      const days = [
+        'Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat'
+      ]
+      const monthName = months[today.getMonth()];
+      const dayName = days[today.getDay()];
+    </script>
+    <style>
+      div.year{
+        text-align: center;
+        padding-top: 3%;
+        font-size: 7vw;
+      }
+      div.date{
+        text-align: center;
+        font-size: 2.8vw;
+      }
+      div.diary{
+        text-align: center;
+      }
+      div.subject{
+        font-size: 1.8vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="year">
+      <script>
+        document.write(year);
+      </script>
+    </div>
+    <div class="date">
+      <script>
+        document.write(monthName+date+"  "+dayName);
+      </script>
+    </div>
+    <div class="diary">
+      <form action="/action_page.php">
+        <div class="subject">
+          <label for="today_diary">Today's diary:</label>
+        </div>
+        <textarea id="today_diary" name="today_diary" rows="25" cols="120"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+  </body>
+</html>
